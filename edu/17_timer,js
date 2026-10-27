@@ -1,0 +1,30 @@
+// 타이머 함수
+// 비동기처리
+
+// setTimeout(cb,ms[,...Args): number
+// 설정한 일정 시간 후에 콜백함수를 실행
+// 콜백 함수에 파라미터가 필요한 경우에만 ...args를 추가
+// return 값은 timeoutUD, 정수값 반환(해당 타이머의 고유한 식별값)
+
+console.log("A");
+const timeoutID = setTimeout(() => {
+  console.log("B");
+}, 1000);
+//ms밀리세컨트 단위라서 1000 =1초
+console.log("C");
+// 해당 ID의 setTimeout 취소 시킨다.
+clearTimeout(timeoutID);
+
+// setInterval(cb,ms[,...args]): naumber
+// 설정한 일정 시간마다 콜백함수를 실행
+// return값은 intervalID 정수값 (해당 인터벌의 고유한 식별값)
+const intervalId = setInterval(() => {
+  console.log("인터벌");
+}, 1000); //인터벌이 있기때문에 계속 무한으로 움직인다.
+
+// clearInterval(intervalId); //이걸 쓰면 아에 멈춤!
+// 최소 5번은 움직이게 하고싶을때 쓴다
+// 새로 setTimeout을 또만든다
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 5000);
