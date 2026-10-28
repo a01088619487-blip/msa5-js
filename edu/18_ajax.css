@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-container {
+  margin-top: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* 3번을 반복하고 1:1:1 로 나온다 */
+  gap: 10px;
+}
+
+.card {
+  padding: 10px;
+  background-color: rgb(240, 234, 153);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-img {
+  background-image: url("../imgs/img.jpg");
+  background-size: cover;
+  /* 위드값에 맞춰서 올라감 */
+  background-position: center;
+  /* 사진이 중앙으로 */
+  background-repeat: no-repeat;
+  /* 바둑판계열을 한개만 나오게  */
+  /* aspect-ratio: 4/3;  이걸로도 비율 가능*/
+  padding-top: 66%;
+  /* 높이가 현재 정해져있지않아서 패딩탑에준다 */
+  /* 이잉 왜패딩으로 하면 그림이 늘엇낫다 하즤 ㅇ0ㅇ;; */
+}
