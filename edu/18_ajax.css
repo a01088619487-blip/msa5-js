@@ -24,7 +24,8 @@
   gap: 10px;
 }
 .card-img {
-  background-image: url("../imgs/img.jpg");
+  /* background-image: url("../imgs/img.jpg"); */
+  /* d이건 이제 JS에 이미지 요소 생성을 해서지움  */
   background-size: cover;
   /* 위드값에 맞춰서 올라감 */
   background-position: center;
@@ -35,4 +36,5 @@
   padding-top: 66%;
   /* 높이가 현재 정해져있지않아서 패딩탑에준다 */
   /* 이잉 왜패딩으로 하면 그림이 늘엇낫다 하즤 ㅇ0ㅇ;; */
+  /* 걍 원리가 궁금한것..ㅋㅋ;; */
 }
